@@ -1,10 +1,14 @@
 {
-  "expo": {
-    "scheme": "acme",
-    "web": {
-      "bundler": "metro"
-    },
-    "name": "travel-app",
-    "slug": "travel-app"
-  }
+	"expo": {
+		"scheme": "acme",
+		"web": {
+			"bundler": "metro"
+		},
+		"name": "travel-app",
+		"slug": "travel-app",
+		"splash": {
+			"image": "./assets/Splashscreen.png",
+			"resizeMode": "cover"
+		}
+	}
 }
