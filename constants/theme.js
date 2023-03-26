@@ -9,5 +9,7 @@ export const APP_FONT = {
 
 export const APP_COLOR = {
 	black: '#000000',
-	white: '#FFFFFF'
+	white: '#FFFFFF',
+	blue: '#0063A7',
+	blueDark: '#030081'
 };

@@ -15,7 +15,7 @@ const Layout = () => {
 		return null;
 	}
 	return (
-		<Stack initialRouteName='auth'>
+		<Stack>
 			<Stack.Screen options={{ headerShown: false }} name='index' />
 			<Stack.Screen options={{ headerShown: false }} name='auth' />
 		</Stack>

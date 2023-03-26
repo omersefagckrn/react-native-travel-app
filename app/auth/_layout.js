@@ -1,9 +1,11 @@
-import { Stack } from 'expo-router';
+import { Stack, useRouter } from 'expo-router';
 
-import Icons from '../../components/Icons';
-import { APP_COLOR, APP_FONT, APP_ICONS } from '../../constants';
+import { APP_COLOR, APP_FONT } from '../../constants';
+
+import Ionicons from '@expo/vector-icons/Ionicons';
 
 const Layout = () => {
+	const route = useRouter();
 	return (
 		<Stack>
 			<Stack.Screen
@@ -11,11 +13,15 @@ const Layout = () => {
 				options={{
 					headerTitle: 'Login',
 					headerTitleStyle: {
-						color: APP_COLOR.black,
+						color: APP_COLOR.white,
 						fontFamily: APP_FONT.SemiBold,
 						fontSize: 14
 					},
-					headerLeft: () => <Icons style={{ width: 12, height: 20 }} iconUrl={APP_ICONS.arrowleft} />
+					headerStyle: {
+						backgroundColor: APP_COLOR.blue
+					},
+
+					headerLeft: () => <Ionicons onPress={() => route.back()} name='ios-arrow-back' size={24} color={APP_COLOR.white} />
 				}}
 			/>
 			<Stack.Screen name='register/index' />

@@ -1,5 +1,9 @@
-import arrowleft from '../assets/icons/arrowleft.png';
+import apple from '../assets/icons/apple.png';
+import facebook from '../assets/icons/facebook.png';
+import google from '../assets/icons/google.png';
 
 export default {
-	arrowleft
+	apple,
+	facebook,
+	google
 };

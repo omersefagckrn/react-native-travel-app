@@ -4,11 +4,15 @@
 		"web": {
 			"bundler": "metro"
 		},
+		"platforms": ["ios", "android"],
+		"version": "1.0.0",
+		"orientation": "portrait",
 		"name": "travel-app",
 		"slug": "travel-app",
 		"splash": {
 			"image": "./assets/Splashscreen.png",
-			"resizeMode": "cover"
+			"resizeMode": "contain",
+			"backgroundColor": "#ffffff"
 		}
 	}
 }
