@@ -1,24 +1,21 @@
-import { useRouter } from 'expo-router';
+import { useFonts } from 'expo-font';
+import { Redirect } from 'expo-router';
 import React from 'react';
-import { SafeAreaView, StyleSheet, Text } from 'react-native';
 
 const Home = () => {
-	const router = useRouter();
-	return (
-		<>
-			<SafeAreaView>
-				<Text
-					onPress={() => {
-						router.push('/auth/login');
-					}}
-				>
-					Homess
-				</Text>
-			</SafeAreaView>
-		</>
-	);
+	const [fontsLoaded] = useFonts({
+		PoppinsExtraBold: require('../assets/fonts/Poppins-ExtraBold.ttf'),
+		PoppinsBold: require('../assets/fonts/Poppins-Bold.ttf'),
+		PoppinsSemiBold: require('../assets/fonts/Poppins-SemiBold.ttf'),
+		PoppinsMedium: require('../assets/fonts/Poppins-Medium.ttf'),
+		PoppinsRegular: require('../assets/fonts/Poppins-Regular.ttf'),
+		PoppinsLight: require('../assets/fonts/Poppins-Light.ttf')
+	});
+
+	if (!fontsLoaded) {
+		return null;
+	}
+	return <Redirect href='/dashboard/home' />;
 };
 
 export default Home;
-
-const styles = StyleSheet.create({});

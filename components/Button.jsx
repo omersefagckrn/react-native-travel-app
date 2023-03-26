@@ -1,11 +1,11 @@
 import React from 'react';
-import { StyleSheet, Text, TouchableOpacity } from 'react-native';
+import { ActivityIndicator, StyleSheet, Text, TouchableOpacity } from 'react-native';
 import { APP_COLOR, APP_FONT } from '../constants';
 
-const Button = ({ text, handlePress, style }) => {
+const Button = ({ text, color, handlePress, disabled = false }) => {
 	return (
-		<TouchableOpacity style={[styles.buttonContainer, style]} onPress={handlePress}>
-			<Text style={styles.buttonText}>{text}</Text>
+		<TouchableOpacity disabled={disabled} style={styles.buttonContainer(color)} onPress={handlePress}>
+			{disabled ? <ActivityIndicator color={APP_COLOR.white} size='small' /> : <Text style={styles.buttonText}>{text}</Text>}
 		</TouchableOpacity>
 	);
 };
@@ -13,12 +13,12 @@ const Button = ({ text, handlePress, style }) => {
 export default Button;
 
 const styles = StyleSheet.create({
-	buttonContainer: {
+	buttonContainer: (color) => ({
 		borderRadius: 20,
-		backgroundColor: APP_COLOR.blue,
-		alignItems: 'center',
-		paddingVertical: 12
-	},
+		paddingVertical: 12,
+		backgroundColor: color ? color : APP_COLOR.blue,
+		alignItems: 'center'
+	}),
 	buttonText: {
 		color: APP_COLOR.white,
 		fontFamily: APP_FONT.Medium,

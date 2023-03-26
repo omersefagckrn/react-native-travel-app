@@ -11,5 +11,7 @@ export const APP_COLOR = {
 	black: '#000000',
 	white: '#FFFFFF',
 	blue: '#0063A7',
-	blueDark: '#030081'
+	blueDark: '#030081',
+	gray: '#C4C4C4',
+	red: '#FF0000'
 };

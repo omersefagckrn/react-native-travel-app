@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
 	},
 	forgotPasswordContainer: {
 		alignItems: 'flex-end',
-		marginBottom: 20
+		marginVertical: 10
 	},
 	forgotPassword: {
 		color: APP_COLOR.blue,
@@ -20,8 +20,7 @@ const styles = StyleSheet.create({
 	},
 	orLoginWithContainer: {
 		flexDirection: 'row',
-		alignItems: 'center',
-		marginTop: 18
+		alignItems: 'center'
 	},
 	orLoginWithHr: {
 		flex: 1,
